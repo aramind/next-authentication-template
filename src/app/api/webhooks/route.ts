@@ -17,6 +17,10 @@ export async function POST(req: NextRequest) {
     if (eventType === "user.created") {
       console.log("User created");
     }
+    if (eventType === "user.updated") {
+      console.log("User updated");
+    }
+
     return new Response("Webhook received", { status: 200 });
   } catch (err) {
     console.error("Error verifying webhook:", err);
